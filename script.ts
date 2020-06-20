@@ -24,12 +24,11 @@ class loc {
 			var get = document.getElementById("one");
 			var inhalt = `
 			<span>
-			<p>Citiy:${infoCity[i]} </p>
+			<p>Citiy:${myCity[i]} </p>
 			<p>Adress:${infoAddress[i]} </p>
 			<p>Zip:${infoZip[i]} </p>
 			</span>` + get.append(inhalt);
 		}
-
 	}
 }
 

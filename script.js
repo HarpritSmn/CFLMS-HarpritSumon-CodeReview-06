@@ -29,7 +29,7 @@ var loc = /** @class */ (function () {
         var infoZip = [1010, 1130];
         for (var i = 0; i < infoCity.length; i++) {
             var get = document.getElementById("one");
-            var inhalt = "\n\t\t\t<span>\n\t\t\t<p>Citiy:" + infoCity[i] + " </p>\n\t\t\t<p>Adress:" + infoAddress[i] + " </p>\n\t\t\t<p>Zip:" + infoZip[i] + " </p>\n\t\t\t</span>" + get.append(inhalt);
+            var inhalt = "\n\t\t\t<span>\n\t\t\t<p>Citiy:" + myCity[i] + " </p>\n\t\t\t<p>Adress:" + infoAddress[i] + " </p>\n\t\t\t<p>Zip:" + infoZip[i] + " </p>\n\t\t\t</span>" + get.append(inhalt);
         }
     };
     return loc;
