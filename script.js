@@ -12,29 +12,35 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var loc = /** @class */ (function () {
-    function loc(city, zip, address, teaserimg) {
+    // teaserimg = "";
+    function loc(city, zip, address) {
         this.city = "";
-        this.zip = "";
         this.address = "";
-        this.teaserimg = "";
+        this.zip = "";
         this.city = city;
-        this.zip = zip;
         this.address = address;
-        this.teaserimg = teaserimg;
+        this.zip = zip;
+        // this.teaserimg = teaserimg;
     }
     loc.prototype.display = function () {
-        return "City: " + this.city + " ZIP: " + this.zip + " Address: " + this.address + " TeaserImg: " + this.teaserimg;
+        console.log("The name of the City is " + this.city + " and the Adress is " + this.address, this.zip);
+        var infoCity = ["Vienna", "Vienna"];
+        var infoAddress = ["Karlsplatz 01", "Maxingstraße 13b"];
+        var infoZip = [1010, 1130];
+        for (var i = 0; i < infoCity.length; i++) {
+            var get = document.getElementById("one");
+            var inhalt = "\n\t\t\t<span>\n\t\t\t<p>Citiy:" + infoCity[i] + " </p>\n\t\t\t<p>Adress:" + infoAddress[i] + " </p>\n\t\t\t<p>Zip:" + infoZip[i] + " </p>\n\t\t\t</span>" + get.append(inhalt);
+        }
     };
     return loc;
 }());
-document.getElementById("one").innerHTML = "display()";
-var fullInformation = new loc("Vienna", "1100", "Troststraße", "bild");
-console.log(fullInformation.display());
+var myCity = new loc("Vienna", "Karlsplatz 1", "1010");
+myCity.display();
 // ++++++++++++++++++++++++++++++ class Restarant ++++++++++++++++++++++++++++++
 var restaurant = /** @class */ (function (_super) {
     __extends(restaurant, _super);
     function restaurant(city, zip, address, teaserimg, telNumber, cruisine, webAddress) {
-        var _this = _super.call(this, city, zip, address, teaserimg) || this;
+        var _this = _super.call(this, city, zip, address) || this;
         _this.telNumber = "";
         _this.cruisine = "";
         _this.webAddress = "";
@@ -49,7 +55,7 @@ var restaurant = /** @class */ (function (_super) {
 var events = /** @class */ (function (_super) {
     __extends(events, _super);
     function events(city, zip, address, teaserimg, telNumber, cruisine, webAddress, eventDate, eventTime, price) {
-        var _this = _super.call(this, city, zip, address, teaserimg) || this;
+        var _this = _super.call(this, city, zip, address) || this;
         _this.eventDate = "";
         _this.eventTime = "";
         _this.price = "";
